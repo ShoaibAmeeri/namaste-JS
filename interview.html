@@ -1,23 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>interview</h1>
-    
 
     <script>
-        function outer() {
-            var i = 10
-            function inner() {
-                console.log(i)
-            }
-            return inner
+    //   function outer() {
+    //     let i = 10;
+    //     function inner() {
+    //       console.log(i);
+    //     }
+    //     return inner;
+    //   }
+
+    //   outer()();
+    //   // double paranthisis its means there it calls the inner function as we have not call inner funciton in outer
+
+    //   var close = outer();
+    //   close();
+
+      // this will work also same
+
+      function outest() {
+        var c = 20;
+        function outer(b) {
+        //   let i = 10;
+          function inner() {
+            console.log(i,b ,c);
+          }
+          return inner;
         }
-        outer()()
+        return outer
+
+    }
+        var i = 100
+        // outest()("hello")();
+        // double paranthisis its means there it calls the inner function as we have not call inner funciton in outer
+
+        var close = outest()("hello");
+        close();
     </script>
-</body>
+  </body>
 </html>
